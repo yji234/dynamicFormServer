@@ -4,10 +4,12 @@ const Router = require('koa-router');
 const router = new Router();
 const cors = require('koa-cors');
 const bodyParser = require('koa-bodyparser');
+
 const userRouter = require('./router/user.js');
 const formbaseRouter = require('./router/formbase.js');
 const dragdropRouter = require('./router/dragdrop.js');
 const formattrRouter = require('./router/formattr.js');
+const formRouter = require('./router/form.js');
 
 /**
  * Menu
@@ -28,6 +30,11 @@ dragdropRouter(router);
  * Form Attr
 */
 formattrRouter(router);
+
+/**
+ * Form
+*/
+formRouter(router);
 
 
 
